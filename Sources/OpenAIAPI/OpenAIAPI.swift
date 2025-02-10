@@ -9,7 +9,7 @@ import Foundation
 public class OpenAIAPI : WebService { // OpenAI Service
     let config : OpenAIAPIConfig
 
-    init(_ config: OpenAIAPIConfig) {
+    public init(_ config: OpenAIAPIConfig) {
         self.config = config
         super.init(baseURL: config.baseURL, secret: config.secret)
     }
