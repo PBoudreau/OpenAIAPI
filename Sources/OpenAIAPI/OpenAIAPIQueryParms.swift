@@ -53,6 +53,24 @@ public struct OpenAIAPIAudioParms : Codable {
     var language: String? // Iso639_1?.code - transcriptions only
     
     var user: String?
+
+    public init(
+        file: Data? = nil,
+        model: String = OpenAIAPIModel.whisper_1.name,
+        prompt: String? = nil,
+        response_format: String = OpenAIAPIResponseFormat.json.name,
+        temperature: Float = 0,
+        language: String? = nil,
+        user: String? = nil
+    ) {
+        self.file = file
+        self.model = model
+        self.prompt = prompt
+        self.response_format = response_format
+        self.temperature = temperature
+        self.language = language
+        self.user = user
+    }
 }
 
 /*
